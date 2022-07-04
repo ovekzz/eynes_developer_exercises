@@ -22,6 +22,10 @@ class Circulo():
     >>> otro_circulo = circulo * 5
     >>> otro_circulo.radio
     25
+    >>> otro_circulo * 0
+    Traceback (most recent call last):
+        ...
+    Exception: el radio debe ser multiplicado por un numero mayor a 0
     >>> print(circulo)
     El radio del circulo es: 5
     El area del circulo es: 78.53981633974483
@@ -45,21 +49,21 @@ class Circulo():
     def modificar_radio(self, radio):
         if radio <= 0:
             raise Exception(
-                "No es posible que el radio sea igual o menor a 0 "
+                "No es posible que el radio sea igual o menor a 0"
                 )
         else:
             self.radio = radio
 
     def __mul__(self, n):
         if n <= 0:
-            raise ValueError(
+            raise Exception(
                 "el radio debe ser multiplicado por un numero mayor a 0"
             )
         return Circulo(self.radio * n)
 
     def __str__(self):
-        return f"El radio del circulo es: {self.radio} \n"\
-               f"El area del circulo es: {self.area()} \n"\
+        return f"El radio del circulo es: {self.radio}\n"\
+               f"El area del circulo es: {self.area()}\n"\
                f"El perimetro del circulo es: {self.perimetro()}"
 
 

@@ -3,7 +3,7 @@ import random
 matriz = []
 
 for i in range(5):
-    fila_de_matriz = [random.randint(0, 2) for i in range(5)]
+    fila_de_matriz = [random.randint(0, 2) for numero in range(5)]
     matriz.append(fila_de_matriz)
 
 contador_de_filas = 0

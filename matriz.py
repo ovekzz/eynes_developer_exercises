@@ -12,22 +12,16 @@ for fila in matriz:
     contador_de_filas += 1
 
     if fila[0] == fila[1] == fila[2] == fila[3]:
-        print(f"fila {contador_de_filas}, columna 1 a 4")
-    elif fila[1] == fila[2] == fila[3] == fila[4]:
-        print(f"fila {contador_de_filas}, columna 2 a 5")
-
-matriz_invertida = []
-
-for columna in range(5):
-    fila_matriz_invertida = [matriz[fila][columna] for fila in range(5)]
-    matriz_invertida.append(fila_matriz_invertida)
+        print(f"hay 4 numeros consecutivos en la fila {contador_de_filas}, de la columna 1 a la 4")
+    if fila[1] == fila[2] == fila[3] == fila[4]:
+        print(f"hay 4 numeros consecutivos en la fila {contador_de_filas}, de la columna 2 a la 5")
 
 contador_de_columnas = 0
 
-for columna in matriz_invertida:
+for columnas in range(5):
     contador_de_columnas += 1
-    if columna[0] == columna[1] == columna[2] == columna[3]:
-        print(f"columna {contador_de_columnas}, fila 1 a 4")
 
-    elif columna[1] == columna[2] == columna[3] == columna[4]:
-        print(f"columna {contador_de_columnas}, fila 2 a 5")
+    if matriz[0][columnas] == matriz[1][columnas] == matriz[2][columnas] == matriz[3][columnas]:
+        print(f"hay 4 numeros consecutivos en la columna {contador_de_columnas}, de la fila 1 a la 4")
+    if matriz[1][columnas] == matriz[2][columnas] == matriz[3][columnas] == matriz[4][columnas]:
+        print(f"hay 4 numeros consecutivos en la columna {contador_de_columnas}, de la fila 2 a la 5")
